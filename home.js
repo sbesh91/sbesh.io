@@ -4,12 +4,13 @@ var redis = require("redis"),
   client = redis.createClient(),
   express = require('express'),
   app = express(),
-  handlebars = require("express-handlebars");
-  //path = require("path");
+  handlebars = require("express-handlebars"),
+  path = require("path");
 
 client.set("string key", "redis working", redis.print);
 
-app.engine("handlebars", handlebars({defaultLayout: '_layout'}));
+app.set('views', path.join(__dirname, "views"));
+app.engine("handlebars", handlebars({defaultLayout: path.join(__dirname, "/views/layouts/_layout")}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
