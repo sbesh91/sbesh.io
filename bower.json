@@ -1,0 +1,18 @@
+{
+  "name": "sbesh.io",
+  "description": "sbesh.io",
+  "main": "index.js",
+  "authors": [
+    "sbesh91 <s.beshensky@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sbesh91/sbesh.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
