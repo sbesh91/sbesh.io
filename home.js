@@ -3,8 +3,8 @@
 var
   fs = require('fs'),
   express = require('express'),
-  app = express(),
-  path = require("path");
+  path = require("path"),
+  app = express();
 
 var srcPath = path.join(__dirname, "/build/unbundled/");
 var directories = fs.readdirSync(srcPath).filter(function(file){
